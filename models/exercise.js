@@ -25,11 +25,26 @@ const ExerciseSchema = new Schema({
     type: Number,
     required: "Number is required.",
   },
-  duraction: {
+  duration: {
     type: Number,
     required: "Number is required.",
   },
+
+  workOut: String,
 });
+
+ExerciseSchema.method.setWeightLb = () => {
+  let weighLb = `${weight}lb.`;
+  return weightLb
+};
+
+// ExerciseSchema.method.setNumber = () => {
+//   sets = `${sets} sets.`
+// }
+
+ExerciseSchema.method.setWorkOut = () => {
+  let workOut = `Your upcoming workout is ${name} that will work on your ${type}. You will be doing ${sets} set of ${reps} reps with ${weightLb}.`;
+};
 
 const Exercise = mongoose.model("Exercise", ExerciseSchema);
 
