@@ -23,7 +23,7 @@ const db = require("./models");
 
 const routes = require("./controller/routes");
 
-// app.use(routes);
+app.use(routes);
 
 // db.on("error", (error) => {
 //     console.log(`Error: ${error}`)
