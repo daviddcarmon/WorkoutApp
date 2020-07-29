@@ -25,10 +25,6 @@ const routes = require("./controller/routes");
 
 app.use(routes);
 
-// db.on("error", (error) => {
-//     console.log(`Error: ${error}`)
-// })
-
 app.listen(3030, () => {
   console.log(`App running at port 3030`);
 });
